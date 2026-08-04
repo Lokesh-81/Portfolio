@@ -8,25 +8,25 @@ const word = "LOKESH";
 const sideImages = [
   {
     src: "/images/hero-side-1.png",
-    alt: "Modern architecture with corten steel",
+    alt: "Code editor with clean interface",
     position: "left",
     span: 1,
   },
   {
     src: "/images/hero-side-2.png",
-    alt: "Aerial view of modern home",
+    alt: "Developer workspace setup",
     position: "left",
     span: 1,
   },
   {
     src: "/images/hero-side-3.png",
-    alt: "Interior view with landscape",
+    alt: "Web development dashboard",
     position: "right",
     span: 1,
   },
   {
     src: "/images/hero-side-4.png",
-    alt: "Modern architecture at night",
+    alt: "Modern tech interface",
     position: "right",
     span: 1,
   },
@@ -149,7 +149,7 @@ export function HeroSection() {
               
               <Image
                 src="/images/hero-mono.png"
-                alt="Modern architectural structure with reflection"
+                alt="Developer workspace with modern tech stack"
                 fill
                 className="absolute inset-0 z-10 object-cover"
                 priority
@@ -195,9 +195,9 @@ export function HeroSection() {
         style={{ opacity: textOpacity }}
       >
         <p className="mx-auto max-w-2xl text-center text-2xl leading-relaxed text-white md:text-3xl lg:text-[2.5rem] lg:leading-snug">
-          Lightweight, durable
+          Clean code, scalable solutions
           <br />
-          and adventure-ready.
+          and modern design.
         </p>
       </div>
 
