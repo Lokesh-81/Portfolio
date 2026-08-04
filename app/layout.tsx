@@ -7,8 +7,8 @@ import './globals.css'
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'EVASION',
-  description: 'High-performance outdoor gear engineered for the modern explorer. Lightweight, durable, adventure-ready.',
+  title: 'P. Lokesh - Full Stack Developer',
+  description: 'Full Stack Developer | Frontend Developer | UI/UX Designer. Building modern, scalable web applications with React, Next.js, and cloud technologies.',
   generator: 'v0.app',
   icons: {
     icon: [
