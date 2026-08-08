@@ -19,8 +19,8 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "P. Lokesh — Ideas in orbit",
+  description: "P. Lokesh is an independent designer and art director working across brand, digital, and impossible briefs.",
   generator: "v0.app",
 }
 
