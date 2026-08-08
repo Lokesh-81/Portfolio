@@ -19,9 +19,19 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "P. Lokesh — Ideas in orbit",
-  description: "P. Lokesh is an independent designer and art director working across brand, digital, and impossible briefs.",
+  title: "P. Lokesh — Full-Stack Web Developer & AI Developer",
+  description: "P. Lokesh is a Full-Stack Web Developer and AI Developer based in Hyderabad, India, building modern web experiences and intelligent products.",
   generator: "v0.app",
+  openGraph: {
+    title: "P. Lokesh — Full-Stack Web Developer & AI Developer",
+    description: "P. Lokesh is a Full-Stack Web Developer and AI Developer based in Hyderabad, India, building modern web experiences and intelligent products.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "P. Lokesh — Full-Stack Web Developer & AI Developer",
+    description: "P. Lokesh is a Full-Stack Web Developer and AI Developer based in Hyderabad, India, building modern web experiences and intelligent products.",
+  },
 }
 
 export default function RootLayout({

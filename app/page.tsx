@@ -2,72 +2,50 @@
 
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react"
 import { useState } from "react"
-import { PortfolioCard, ProjectLink, type Project } from "@/components/portfolio-card"
+import { PortfolioCard, type Project } from "@/components/portfolio-card"
 
 const projects: Project[] = [
-  { index: "01", title: "Asteria", subtitle: "For minds in motion.", type: "Brand identity · Digital", year: "2024", accent: "#d7ff4f", planet: "#4c5a19", detail: "A visual system for the next generation of independent thinkers." },
-  { index: "02", title: "Orbit / 01", subtitle: "Building for the unknown.", type: "Product design · Strategy", year: "2024", accent: "#ff996b", planet: "#69432e", detail: "A new interface language for navigating complex ideas with ease." },
-  { index: "03", title: "Futureforms", subtitle: "The shape of tomorrow.", type: "Editorial · Art direction", year: "2023", accent: "#b5a0ff", planet: "#483c68", detail: "An ongoing study of technology, culture, and the spaces between." },
-  { index: "04", title: "Kindred", subtitle: "Closer than close.", type: "Campaign · Film", year: "2023", accent: "#ffcc73", planet: "#69502a", detail: "A campaign about the small gestures that make a place feel like home." },
-  { index: "05", title: "Lumen", subtitle: "Make room for light.", type: "Web experience · 3D", year: "2022", accent: "#7df0df", planet: "#295e5b", detail: "An immersive archive for objects, places, and curious people." },
+  { index: "01", title: "Lumora AI", subtitle: "PERSONAL PROJECT", type: "AI product · Personal project", year: "2026", accent: "#d7ff4f", planet: "#4c5a19", detail: "An intelligent product exploring useful, human-centered AI experiences." },
+  { index: "02", title: "Naivaidya", subtitle: "Web platform", type: "Full-stack · Product", year: "2026", accent: "#ff996b", planet: "#69432e", detail: "A modern digital experience built across interface, backend, and APIs." },
+  { index: "03", title: "BELVO", subtitle: "Professional work", type: "Full-stack · Web", year: "2026", accent: "#b5a0ff", planet: "#483c68", detail: "Selected work from my full-stack web development practice at BELVO." },
+  { index: "04", title: "Indira Thakur", subtitle: "Web experience", type: "Frontend · Product", year: "2025", accent: "#ffcc73", planet: "#69502a", detail: "A focused web experience designed around clarity and connection." },
+  { index: "05", title: "Foundarly", subtitle: "Digital product", type: "Product · Engineering", year: "2025", accent: "#7df0df", planet: "#295e5b", detail: "A digital product shaped through thoughtful systems and implementation." },
 ]
+
+const skills = ["C", "C++", "Python", "Java", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express.js", "Django", "Tailwind CSS", "MySQL", "MongoDB", "Supabase", "REST APIs", "AI", "Generative AI", "RAG", "LLM Applications", "Git", "GitHub", "Vercel", "Power BI", "Microsoft Fabric"]
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const nav = ["home", "work", "about", "experience", "education", "skills", "contact"]
+
+  const structuredData = { "@context": "https://schema.org", "@type": "Person", name: "Poosala Lokesh", alternateName: "P. Lokesh", jobTitle: ["Full-Stack Web Developer", "AI Developer"], address: { "@type": "PostalAddress", addressLocality: "Hyderabad", addressRegion: "Telangana", addressCountry: "India" }, url: "https://github.com/lokeshnaivaidya-max", sameAs: ["https://github.com/lokeshnaivaidya-max"] }
 
   return (
-    <main className="site-shell">
+    <main className="site-shell" id="home">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <nav className="site-nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="P. Lokesh home">P<span>.</span>LOKESH</a>
+        <a className="wordmark" href="#home" aria-label="P. Lokesh home">P<span>.</span>LOKESH</a>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a href="#work" onClick={() => setMenuOpen(false)}>Selected work</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          {nav.map((item) => <a key={item} href={`#${item}`} onClick={() => setMenuOpen(false)}>{item}</a>)}
         </div>
-        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? "Close menu" : "Open menu"}>
-          {menuOpen ? <X size={19} /> : <Menu size={19} />}
-        </button>
+        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? "Close menu" : "Open menu"}>{menuOpen ? <X size={19} /> : <Menu size={19} />}</button>
       </nav>
 
-      <section className="hero" id="top">
-        <div className="hero-intro">
-          <span className="eyebrow">Independent designer / art director</span>
-          <p>Based between Bengaluru<br />and everywhere curious.</p>
-        </div>
-        <div className="hero-title-wrap">
-          <p className="hero-kicker">Portfolio / 2024—25</p>
-          <h1>Ideas<br /><em>in orbit.</em></h1>
-          <p className="hero-note">I make identities, interfaces,<br />and other useful things.</p>
-        </div>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-intro"><span className="eyebrow">Full-stack web developer / AI developer</span><p>Hyderabad, Telangana<br />India</p></div>
+        <div className="hero-title-wrap"><p className="hero-kicker">Portfolio / 2026</p><h1 id="hero-title">P.<br /><em>LOKESH</em></h1><p className="hero-note">FULL-STACK WEB DEVELOPER<br />AI DEVELOPER</p><p className="hero-support">Building modern web experiences and intelligent products.</p></div>
         <a className="scroll-cue" href="#work"><span>Scroll to explore</span><ArrowDown size={16} /></a>
       </section>
 
-      <section className="statement" id="about">
-        <p className="section-label">01 / The short version</p>
-        <div className="statement-copy">
-          <h2>Good design is a <em>conversation</em> between a clear idea and an open mind.</h2>
-          <div className="statement-side"><p>I&apos;m P. Lokesh, a multidisciplinary designer working across brand, digital, and the occasional impossible brief.</p><ProjectLink>More about me</ProjectLink></div>
-        </div>
-      </section>
+      <section className="statement" id="about"><p className="section-label">01 / About</p><div className="statement-copy"><h2>Building useful things with <em>code and intelligence.</em></h2><div className="statement-side"><p>I&apos;m P. Lokesh, a 20-year-old Full-Stack Web Developer and AI Developer based in Hyderabad, India. I build modern web experiences and intelligent products, working across frontend, backend, APIs, AI, and product development.</p></div></div></section>
 
-      <section className="work-section" id="work">
-        <div className="section-heading"><p className="section-label">02 / Selected orbitals</p><p className="section-count">{projects.length} projects / 360° view</p></div>
-        <div className="projects-grid">{projects.map((project) => <PortfolioCard key={project.index} project={project} />)}</div>
-      </section>
+      <section className="work-section" id="work"><div className="section-heading"><p className="section-label">02 / Selected work</p><p className="section-count">05 projects / 360° view</p></div><div className="projects-grid">{projects.map((project) => <PortfolioCard key={project.index} project={project} />)}</div></section>
 
-      <section className="process-section">
-        <p className="section-label">03 / How I work</p>
-        <div className="process-grid">
-          <div><span>01</span><h3>Find the signal.</h3><p>Every good project starts by making space for the real question hiding underneath the brief.</p></div>
-          <div><span>02</span><h3>Make it tangible.</h3><p>Ideas become useful when they can be seen, touched, tested, and shared with other people.</p></div>
-          <div><span>03</span><h3>Leave room.</h3><p>The best systems have a little air in them. Enough to grow, adapt, and surprise you later.</p></div>
-        </div>
-      </section>
+      <section className="info-section" id="experience"><p className="section-label">03 / Experience</p><div className="info-grid"><div><p className="eyebrow">June 2026 — Present</p><h3>FULL-STACK WEB DEVELOPER</h3><p>BELVO</p></div><div><p className="eyebrow">2025</p><h3>GOOGLE STUDENT AMBASSADOR</h3></div></div></section>
+      <section className="info-section" id="education"><p className="section-label">04 / Education</p><div className="info-grid"><div><p className="eyebrow">2023 — 2027</p><h3>B.Sc. (MSCS)</h3><p>Wesley Degree College<br />Osmania University</p></div></div></section>
+      <section className="skills-section" id="skills"><p className="section-label">05 / Skills</p><div className="skills-list">{skills.map((skill) => <span key={skill}>{skill}</span>)}</div></section>
 
-      <footer className="site-footer" id="contact">
-        <div><p className="section-label">Have a good question?</p><a className="footer-email" href="mailto:hello@plokesh.com">hello@plokesh.com <ArrowUpRight size={25} strokeWidth={1.3} /></a></div>
-        <div className="footer-bottom"><span>© 2024 P. Lokesh</span><span>Built with curiosity</span><a href="#top">Back to top ↑</a></div>
-      </footer>
+      <footer className="site-footer" id="contact"><div><p className="section-label">06 / Contact</p><h2 className="contact-name">P. LOKESH</h2><p className="contact-role">Full-Stack Web Developer<br />AI Developer</p><p className="contact-location">Hyderabad, Telangana, India</p><div className="contact-links"><a href="https://github.com/lokeshnaivaidya-max" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={16} /></a><a href="[ADD MY LINKEDIN URL HERE]">LinkedIn <ArrowUpRight size={16} /></a><a href="mailto:[ADD MY EMAIL HERE]">Email <ArrowUpRight size={16} /></a></div></div><div className="footer-bottom"><span>© 2026 P. Lokesh</span><a href="#home">Back to top ↑</a></div></footer>
     </main>
   )
 }
