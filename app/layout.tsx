@@ -1,0 +1,1 @@
+import './globals.css';import type{Metadata}from'next';export const metadata:Metadata={title:'P. Lokesh — Webverse',description:'Full-Stack Web Developer & AI Enthusiast'};export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
