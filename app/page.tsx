@@ -35,5 +35,3 @@ export default function Home() {
     <section className="contact section" id="contact"><p className="eyebrow">06 — START A PROJECT</p><h2>LET&apos;S MAKE<br/><i>THE WEB BETTER.</i></h2><div className="contact-grid"><a href="mailto:lokesh81@myyahoo.com">LOKESH81@MYYAHOO.COM <b>↗</b></a><a href="tel:+918885674172">+91 88856 74172 <b>↗</b></a><a href="https://github.com/Lokesh-81" target="_blank">GITHUB / LOKESH-81 <b>↗</b></a><a href="https://www.linkedin.com/in/poosala-lokesh/" target="_blank">LINKEDIN / POOSALA-LOKESH <b>↗</b></a></div><p className="footer">© 2026 P. LOKESH · HYDERABAD, INDIA · FULL-STACK WEB DEVELOPER & AI ENTHUSIAST</p></section>
   </main>;
 }
-n>;
-}
