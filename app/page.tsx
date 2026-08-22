@@ -1,1 +1,27 @@
-import Image from'next/image';import Link from'next/link';import{Nav,Footer}from'../components/SiteChrome';export default function Home(){return <><Nav/><main className="mono-hero"><div className="mono-word">LOKESH</div><div className="mono-photo"><Image src="/lokesh-studio.png" alt="P. Lokesh at work" fill priority/></div><div className="mono-caption"><span>FULL STACK DEVELOPER & AI ENTHUSIAST</span><p>Building modern web experiences, scalable applications and AI-powered products.</p></div><div className="mono-index">01 / DIGITAL PORTFOLIO<br/>HYDERABAD, INDIA</div><Link className="mono-cta" href="/projects">EXPLORE WORK <b>↘</b></Link></main><section className="mono-intro"><p>SELECTED WORK / 2026</p><h1>WEB PRODUCTS<br/>WITH <i>REAL IMPACT.</i></h1><div><p>From AI investment research and healthcare technology to premium digital platforms, I build products across frontend, backend, APIs, databases and AI.</p><Link href="/projects">VIEW ALL 08 PROJECTS ↗</Link></div></section><Footer/></>}
+import { Header } from "@/components/header";
+import { HeroSection } from "@/components/sections/hero-section";
+import { PhilosophySection } from "@/components/sections/philosophy-section";
+import { FeaturedProductsSection } from "@/components/sections/featured-products-section";
+import { TechnologySection } from "@/components/sections/technology-section";
+import { GallerySection } from "@/components/sections/gallery-section";
+import { CollectionSection } from "@/components/sections/collection-section";
+import { EditorialSection } from "@/components/sections/editorial-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { FooterSection } from "@/components/sections/footer-section";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-background">
+      <Header />
+      <HeroSection />
+      <PhilosophySection />
+      <FeaturedProductsSection />
+      <TechnologySection />
+      <GallerySection />
+      <CollectionSection />
+      <EditorialSection />
+      <TestimonialsSection />
+      <FooterSection />
+    </main>
+  );
+}
