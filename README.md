@@ -1,6 +1,5 @@
-# APEX Portfolio
-
-Cinematic, F1-inspired (original visual identity) portfolio for a web developer.
+# LOKESH Portfolio
+ portfolio for a web developer.
 
 ## Run locally
 
